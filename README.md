@@ -1,3 +1,16 @@
+#TODO:
+Write an overview of the project for a new visitor to your repo
+
+#Number and name of feature: #1: Display images 
+
+#Estimate of time needed to complete: 3-4 hours
+
+#Start time: 7/17 8:05pm
+
+#Finish time: _____
+
+#Actual time needed to complete: _____
+
 # 301-lab-02
 Feature #1: Display images
 Why are we implementing this feature?
