@@ -5,7 +5,7 @@ Write an overview of the project for a new visitor to your repo
 
 #Estimate of time needed to complete: 3-4 hours
 
-#Start time: 7/17 8:05pm
+#Start time: 7/17 8:05pm, 8:12pm
 
 #Finish time: _____
 
