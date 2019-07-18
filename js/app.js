@@ -1,10 +1,8 @@
 'use-strict'
 
 /* -----TODO:-----
-Use AJAX, specifically $.get(), to read the provided JSON file.
-Each object should become a new instance of a constructor function. Refer to the data to determine the necessary properties.
-Use jQuery to make a copy of the HTML template of the photo component. For each object, fill in the duplicated template with its properties, then append the copy to the DOM. */
-
+Create a <select> element which contains unique <option> elements extracted dynamically from the JSON file, one for each keyword.
+Use an event handler to respond when the user chooses an option from the select menu. Hide all of the images, then show those whose keyword matches the option chosen.
 
 /* -----global variables----- */
 
