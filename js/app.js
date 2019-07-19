@@ -19,8 +19,8 @@ function Img(img) {
 Img.allImgs = [];
 
 Img.prototype.render = function() {
-  $('main').append('<div class="clone"></div>'); // appends html to the main element
-  let imgClone = $('div[class="clone"]'); //
+  $('main').append('<section class="clone"></section>'); // appends html to the main element
+  let imgClone = $('section[class="clone"]'); //
 
   let imgHtml = $('#photo-template').html(); //
 
@@ -31,6 +31,7 @@ Img.prototype.render = function() {
   imgClone.find('p').text(this.description);
   imgClone.removeClass('clone');
   imgClone.attr('class', this.keyword);
+  $('select').append(`<option value="${this.keyword}">${this.keyword}</option>`);
 }
 
 Img.readJson = () => {
@@ -47,7 +48,34 @@ Img.loadImgs = () => {
   Img.allImgs.forEach(img => img.render());
 }
 
+/* -----event handler----- */
+
+// function hide() {
+//   var divEl = document.getElementsByTagName('div');
+//   for(var i = 0; i < Img.allImgs.length; i ++) {
+//     if(event.target.value !== Img.allImgs[i].keyword) {
+//       divEl[i].className = 'hide';
+//     } else if(event.target.value === Img.allImgs[i].keyword) {
+//       divEl[i].className = event.target.value;
+//     }
+//   }
+// }
+
+/* -----event listener ----- */
+
+// var selectEl = document.getElementById('select');
+// selectEl.addEventListener('change', hide);
+
+/* ----jquery event listener/handler----- */
+
 /* -----executables----- */
 
 $(() => Img.readJson());
-console.log(Img.allImgs);
+
+$('select').on('change', function() {
+  let $selection = $(this).val();
+  $('section').hide();
+  $(`section[class="${$selection}"]`).show();
+});
+
+// console.log(Img.allImgs);
