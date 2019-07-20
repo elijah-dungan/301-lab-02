@@ -48,28 +48,6 @@ Img.loadImgs = () => {
   Img.allImgs.forEach(img => img.render());
 }
 
-/* -----event handler----- */
-
-// function hide() {
-//   var divEl = document.getElementsByTagName('div');
-//   for(var i = 0; i < Img.allImgs.length; i ++) {
-//     if(event.target.value !== Img.allImgs[i].keyword) {
-//       divEl[i].className = 'hide';
-//     } else if(event.target.value === Img.allImgs[i].keyword) {
-//       divEl[i].className = event.target.value;
-//     }
-//   }
-// }
-
-/* -----event listener ----- */
-
-// var selectEl = document.getElementById('select');
-// selectEl.addEventListener('change', hide);
-
-/* ----jquery event listener/handler----- */
-
-/* -----executables----- */
-
 $(() => Img.readJson());
 
 $('select').on('change', function() {
